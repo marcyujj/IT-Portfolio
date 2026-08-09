@@ -125,7 +125,7 @@ nslookup google.com
 
 **Static IPv4 configuration**
 
-![Windows Server static IPv4 settings](images/lab-02/static-ip-configuration.png)
+![Windows Server static IPv4 settings](https://github.com/marcyujj/IT-Portfolio/blob/60e80dd69abf0cbbf551126d3aed00bf5ea8141b/ipv4%20configuration.png)
 
 **Network verification**
 
