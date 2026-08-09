@@ -130,6 +130,7 @@ nslookup google.com
 **Network verification**
 
 ![Static IP and connectivity test results](https://github.com/marcyujj/IT-Portfolio/blob/de11b78e05f9e44032d3816ab08a7c233764b104/Screenshot%202026-08-08%20210716.png)
+https://github.com/marcyujj/IT-Portfolio/blob/2db159cc0ecef9fddc6c92f7957f054b672f49fd/Screenshot%202026-08-08%20210856.png
 
 #### Troubleshooting experience
 
