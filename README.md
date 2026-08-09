@@ -76,7 +76,6 @@ lab 1 testing results images
 https://github.com/marcyujj/IT-Portfolio/blob/e751aedf54b608cd891dd81009c1bbd224c5bbf1/Screenshot%202026-08-05%20114830.png
 https://github.com/marcyujj/IT-Portfolio/blob/6cd283c6fada5b21622d2f266fc6a72c8fd1c44d/Screenshot%202026-08-05%20115109.png
 
-
 ### Lab 2: Windows Server Naming and Static IP Configuration
 
 For this lab, I prepared my Windows Server for future Active Directory and domain-management projects. My goal was to give the server a clear name and a consistent IP address so it could be identified and reached reliably on the network.
@@ -130,7 +129,7 @@ nslookup google.com
 
 **Network verification**
 
-![Static IP and connectivity test results]https://github.com/marcyujj/IT-Portfolio/blob/8e57464f5b0f03b2a3b06314e05c5b62841dc419/Screenshot%202026-08-08%20210716.png 
+![Static IP and connectivity test results](images/lab-02/network-verification.png)
 
 #### Troubleshooting experience
 
@@ -145,6 +144,7 @@ The server was successfully renamed to `LAB-DC01` and configured with a static I
 **What I learned**
 
 This lab helped me understand why servers need clear names and consistent IP addresses. The computer name identifies the server, while the static IP provides a reliable network location. I also practiced verifying each part of the connection instead of assuming the configuration worked after making changes.
+
 
 ## 📜 Certification
 
