@@ -72,6 +72,8 @@ All connectivity tests passed with no packet loss. The server successfully commu
 This lab helped me understand how to troubleshoot a network connection in stages. Testing the local computer, gateway, internet connection, and DNS separately makes it easier to identify where a problem is occurring.
 
 
+
+
 ## 📜 Certification
 
 - CompTIA A+ (In Progress)
