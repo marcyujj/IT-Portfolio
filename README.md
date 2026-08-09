@@ -71,7 +71,7 @@ All connectivity tests passed with no packet loss. The server successfully commu
 
 This lab helped me understand how to troubleshoot a network connection in stages. Testing the local computer, gateway, internet connection, and DNS separately makes it easier to identify where a problem is occurring.
 
-
+https://github.com/marcyujj/IT-Portfolio/blob/e751aedf54b608cd891dd81009c1bbd224c5bbf1/Screenshot%202026-08-05%20114830.png
 
 
 ## 📜 Certification
