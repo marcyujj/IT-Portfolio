@@ -121,7 +121,7 @@ nslookup google.com
 
 **Server name**
 
-![Server Manager showing LAB-DC01](images/lab-02/server-name.png)
+![Server Manager showing LAB-DC01](https://github.com/marcyujj/IT-Portfolio/blob/3c18dbcfdcddcaa7ec4552962384a6311685b5bd/Screenshot%202026-08-08%20210410.png)
 
 **Static IPv4 configuration**
 
