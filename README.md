@@ -39,7 +39,7 @@ For my first home lab, I installed Windows Server 2022 in Oracle VirtualBox and 
 
 **What I did**
 
-I started with `ipconfig /all` to identify the server’s IP address, subnet mask, default gateway, DNS server, DHCP status, and MAC address.
+I started with ipconfig /all to identify the server’s IP address, subnet mask, default gateway, DNS server, DHCP status, and MAC address.
 
 I then tested each part of the connection:
 
@@ -51,10 +51,10 @@ nslookup google.com
 
 
 
-* `ping 127.0.0.1` confirmed that the server’s TCP/IP stack was working.
-* `ping 10.0.2.2` confirmed communication with the virtual default gateway.
-* `ping 8.8.8.8` confirmed that the server could reach an external internet address.
-* `nslookup google.com` confirmed that DNS could translate a domain name into an IP address.
+* ```ping 127.0.0.1```  confirmed that the server’s TCP/IP stack was working.
+* ```ping 10.0.2.2```  confirmed communication with the virtual default gateway.
+* ```ping 8.8.8.8```  confirmed that the server could reach an external internet address.
+* ```nslookup google.com```  confirmed that DNS could translate a domain name into an IP address.
 
 #### Troubleshooting experience
 
@@ -92,30 +92,30 @@ For this lab, I prepared my Windows Server for future Active Directory and domai
 
 I started by creating a snapshot of the working virtual machine. This gave me a recovery point before changing the server’s name and network configuration.
 
-Using Server Manager, I renamed the server to `LAB-DC01`. The name identifies it as the first domain controller planned for my lab environment. After restarting Windows Server, I confirmed that the new name was applied successfully.
+Using Server Manager, I renamed the server to LAB-DC01. The name identifies it as the first domain controller planned for my lab environment. After restarting Windows Server, I confirmed that the new name was applied successfully.
 
-Next, I used `ipconfig /all` to record the server’s DHCP-assigned network settings. I then manually configured the server with the following static IPv4 information:
+Next, I used ipconfig /all to record the server’s DHCP-assigned network settings. I then manually configured the server with the following static IPv4 information:
 
-* IP address: `10.0.2.15`
-* Subnet mask: `255.255.255.0`
-* Default gateway: `10.0.2.2`
-* Preferred DNS server: `192.168.1.1`
+* IP address: 10.0.2.15
+* Subnet mask: 255.255.255.0
+* Default gateway: 10.0.2.2
+* Preferred DNS server: 192.168.1.1
 
 I used the following commands to verify the changes and test connectivity:
 
-```powershell
+powershell
 hostname
 ipconfig /all
 ping 10.0.2.2
 ping 8.8.8.8
 nslookup google.com
-```
 
-* `hostname` confirmed the new server name.
-* `ipconfig /all` showed the static IP information and confirmed that DHCP was disabled.
-* `ping 10.0.2.2` confirmed communication with the virtual default gateway.
-* `ping 8.8.8.8` confirmed external network connectivity.
-* `nslookup google.com` confirmed that DNS name resolution was working.
+
+* ```hostname``` confirmed the new server name.
+* ```ipconfig /all``` showed the static IP information and confirmed that DHCP was disabled.
+* ```ping 10.0.2.2``` confirmed communication with the virtual default gateway.
+* ```ping 8.8.8.8``` confirmed external network connectivity.
+* ```nslookup google.com``` confirmed that DNS name resolution was working.
 
 #### Screenshots
 
@@ -140,7 +140,7 @@ This reminded me to check the VM’s boot media before continuing with an instal
 
 **Result**
 
-The server was successfully renamed to `LAB-DC01` and configured with a static IPv4 address. The gateway and external connectivity tests completed with zero packet loss, and DNS successfully resolved `google.com`.
+The server was successfully renamed to LAB-DC01 and configured with a static IPv4 address. The gateway and external connectivity tests completed with zero packet loss, and DNS successfully resolved `google.com`.
 
 **What I learned**
 
