@@ -76,6 +76,76 @@ lab 1 testing results images
 https://github.com/marcyujj/IT-Portfolio/blob/e751aedf54b608cd891dd81009c1bbd224c5bbf1/Screenshot%202026-08-05%20114830.png
 https://github.com/marcyujj/IT-Portfolio/blob/6cd283c6fada5b21622d2f266fc6a72c8fd1c44d/Screenshot%202026-08-05%20115109.png
 
+
+### Lab 2: Windows Server Naming and Static IP Configuration
+
+For this lab, I prepared my Windows Server for future Active Directory and domain-management projects. My goal was to give the server a clear name and a consistent IP address so it could be identified and reached reliably on the network.
+
+**Lab environment**
+
+* Windows Server 2022 Standard Evaluation (Desktop Experience)
+* Oracle VirtualBox
+* VirtualBox NAT networking
+* Server Manager
+* Windows PowerShell
+
+**What I did**
+
+I started by creating a snapshot of the working virtual machine. This gave me a recovery point before changing the server’s name and network configuration.
+
+Using Server Manager, I renamed the server to `LAB-DC01`. The name identifies it as the first domain controller planned for my lab environment. After restarting Windows Server, I confirmed that the new name was applied successfully.
+
+Next, I used `ipconfig /all` to record the server’s DHCP-assigned network settings. I then manually configured the server with the following static IPv4 information:
+
+* IP address: `10.0.2.15`
+* Subnet mask: `255.255.255.0`
+* Default gateway: `10.0.2.2`
+* Preferred DNS server: `192.168.1.1`
+
+I used the following commands to verify the changes and test connectivity:
+
+```powershell
+hostname
+ipconfig /all
+ping 10.0.2.2
+ping 8.8.8.8
+nslookup google.com
+```
+
+* `hostname` confirmed the new server name.
+* `ipconfig /all` showed the static IP information and confirmed that DHCP was disabled.
+* `ping 10.0.2.2` confirmed communication with the virtual default gateway.
+* `ping 8.8.8.8` confirmed external network connectivity.
+* `nslookup google.com` confirmed that DNS name resolution was working.
+
+#### Screenshots
+
+**Server name**
+
+![Server Manager showing LAB-DC01](images/lab-02/server-name.png)
+
+**Static IPv4 configuration**
+
+![Windows Server static IPv4 settings](images/lab-02/static-ip-configuration.png)
+
+**Network verification**
+
+![Static IP and connectivity test results](images/lab-02/network-verification.png)
+
+#### Troubleshooting experience
+
+After restarting the virtual machine, I accidentally booted from the Windows Server installation media and reached the setup screen. Since the server was already installed and working, I stopped before making any changes, removed the ISO from the virtual optical drive, and restarted the VM. The server then booted normally with its existing files and configuration intact.
+
+This reminded me to check the VM’s boot media before continuing with an installation screen, especially when a working operating system is already present.
+
+**Result**
+
+The server was successfully renamed to `LAB-DC01` and configured with a static IPv4 address. The gateway and external connectivity tests completed with zero packet loss, and DNS successfully resolved `google.com`.
+
+**What I learned**
+
+This lab helped me understand why servers need clear names and consistent IP addresses. The computer name identifies the server, while the static IP provides a reliable network location. I also practiced verifying each part of the connection instead of assuming the configuration worked after making changes.
+
 ## 📜 Certification
 
 - CompTIA A+ (In Progress)
