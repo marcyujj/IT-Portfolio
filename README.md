@@ -147,6 +147,8 @@ The server was successfully renamed to LAB-DC01 and configured with a static IPv
 This lab helped me understand why servers need clear names and consistent IP addresses. The computer name identifies the server, while the static IP provides a reliable network location. I also practiced verifying each part of the connection instead of assuming the configuration worked after making changes.
 
 
+Lab 2 Complete - Renamed Server and Static IP
+
 ## 📜 Certification
 
 - CompTIA A+ (In Progress)
