@@ -185,13 +185,13 @@ The public DNS address is temporary. It will be replaced with the server’s own
 
 Network configuration and connectivity were validated using:
 
-```powershell
+powershell
 ipconfig /all
 ping 10.10.10.10
 ping 10.10.10.1
 ping 8.8.8.8
 nslookup google.com
-```
+
 
 * `ipconfig /all` verified the server’s static network configuration.
 * `ping 10.10.10.10` confirmed that the server recognized its assigned address.
