@@ -149,6 +149,91 @@ This lab helped me understand why servers need clear names and consistent IP add
 
 Lab 2 Complete - Renamed Server and Static IP
 
+### Lab 3: Shared Virtual Network Configuration and Connectivity Testing
+
+This lab involved creating a shared virtual network for `LAB-DC01` and future Windows client machines. The objective was to allow the virtual machines to communicate with each other while maintaining internet access and preparing the environment for Active Directory, DNS, and DHCP configuration.
+
+**Lab environment**
+
+* Windows Server 2022 Standard Evaluation (Desktop Experience)
+* Oracle VirtualBox
+* VirtualBox Network Manager
+* Server Manager
+* Windows PowerShell
+
+**Procedure**
+
+A VirtualBox NAT Network named `LAB-NET` was created with the following configuration:
+
+* Network name: `LAB-NET`
+* IPv4 prefix: `10.10.10.0/24`
+* VirtualBox DHCP: Disabled
+* IPv6: Disabled
+
+VirtualBox DHCP was disabled because Windows Server will provide DHCP services in a future lab. This will prevent two DHCP services from assigning conflicting addresses on the same network.
+
+The server’s virtual network adapter was changed from standard NAT to the new `LAB-NET` NAT Network. The virtual cable option was enabled to simulate a connected Ethernet cable.
+
+After starting Windows Server, its previous address was replaced with the following configuration:
+
+* IP address: `10.10.10.10`
+* Subnet mask: `255.255.255.0`
+* Default gateway: `10.10.10.1`
+* Preferred DNS server: `8.8.8.8`
+
+The public DNS address is temporary. It will be replaced with the server’s own address after Active Directory Domain Services and DNS are installed.
+
+Network configuration and connectivity were validated using:
+
+```powershell
+ipconfig /all
+ping 10.10.10.10
+ping 10.10.10.1
+ping 8.8.8.8
+nslookup google.com
+```
+
+* `ipconfig /all` verified the server’s static network configuration.
+* `ping 10.10.10.10` confirmed that the server recognized its assigned address.
+* `ping 10.10.10.1` confirmed communication with the VirtualBox NAT Network gateway.
+* `ping 8.8.8.8` confirmed external internet connectivity.
+* `nslookup google.com` confirmed successful DNS name resolution.
+
+**Screenshots**
+
+NAT Network configuration:
+
+![VirtualBox LAB-NET configuration](images/lab-03/nat-network-configuration.png)
+
+Static IPv4 configuration:
+
+![LAB-DC01 static IPv4 configuration](images/lab-03/static-ip-configuration.png)
+
+Network verification:
+
+![LAB-NET connectivity and DNS test results](images/lab-03/network-verification.png)
+
+**Troubleshooting experience**
+
+While configuring the new static address, the default gateway was initially entered as `10.10.0.1`. Windows displayed a warning explaining that the gateway was not on the same network as the server’s IP address.
+
+The configuration was reviewed before being saved, and the gateway was corrected to `10.10.10.1`. After the correction, the server successfully reached its own address, the virtual gateway, the internet, and the configured DNS server with zero packet loss.
+
+This demonstrated how a small error in one section of an IP address can prevent proper network communication. It also reinforced the importance of reading system warnings and verifying each network value carefully.
+
+**Result**
+
+A shared NAT Network named `LAB-NET` was successfully created, and `LAB-DC01` was connected using the static address `10.10.10.10`. Connectivity tests confirmed successful communication with the virtual gateway, external internet access, and proper DNS resolution.
+
+The network is now prepared for a Windows client machine and future Active Directory, DNS, and DHCP labs.
+
+**Key learning outcomes**
+
+This lab demonstrated the difference between standard NAT and a shared NAT Network. Standard NAT provides internet access but normally isolates virtual machines, while a NAT Network allows machines connected to it to communicate with each other.
+
+The exercise also reinforced the importance of matching IP addresses and gateways to the correct subnet, avoiding multiple DHCP services on the same network, and testing connectivity in stages to locate configuration problems.
+
+
 ## 📜 Certification
 
 - CompTIA A+ (In Progress)
