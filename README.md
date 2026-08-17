@@ -207,7 +207,7 @@ NAT Network configuration:
 
 Static IPv4 configuration:
 
-![LAB-DC01 static IPv4 configuration](images/lab-03/static-ip-configuration.png)
+https://github.com/marcyujj/IT-Portfolio/blob/b895d0565448b8960f87b05e8b0730bf031059d8/static%20ipv4%20configuration.png
 
 Network verification:
 
