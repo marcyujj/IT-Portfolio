@@ -203,7 +203,7 @@ nslookup google.com
 
 NAT Network configuration:
 
-![VirtualBox LAB-NET configuration](images/lab-03/nat-network-configuration.png)
+https://github.com/marcyujj/IT-Portfolio/blob/b1bf2a191b98daaa37e70ae64b81195fc4cf1a02/NAT-%20network%20configuration.png
 
 Static IPv4 configuration:
 
