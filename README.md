@@ -212,7 +212,7 @@ https://github.com/marcyujj/IT-Portfolio/blob/b895d0565448b8960f87b05e8b0730bf03
 Network verification:
 
 https://github.com/marcyujj/IT-Portfolio/blob/984a7b1177e85e4950cafed87060fb79bb57c8b1/network%20verification%20test%20results.png
-
+https://github.com/marcyujj/IT-Portfolio/blob/d9b001c7d6fb96cee525fa38b2457b4a9e4dca78/network%20verification%202.png
 **Troubleshooting experience**
 
 While configuring the new static address, the default gateway was initially entered as `10.10.0.1`. Windows displayed a warning explaining that the gateway was not on the same network as the server’s IP address.
