@@ -211,7 +211,7 @@ https://github.com/marcyujj/IT-Portfolio/blob/b895d0565448b8960f87b05e8b0730bf03
 
 Network verification:
 
-![LAB-NET connectivity and DNS test results](images/lab-03/network-verification.png)
+https://github.com/marcyujj/IT-Portfolio/blob/984a7b1177e85e4950cafed87060fb79bb57c8b1/network%20verification%20test%20results.png
 
 **Troubleshooting experience**
 
